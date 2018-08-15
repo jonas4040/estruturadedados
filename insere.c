@@ -13,5 +13,9 @@ int main(){
 	printf("Em qual posicao voce quer inserir? (de 0 a %d) ",qtd-1);
 	scanf("%d",&pos);
 	
+	for(i=qtd+1;i>0;i--){
+		arr[i]=arr[i-1];
+		printf("%d ",arr[i]);
+	}
 	return 0;
 }
