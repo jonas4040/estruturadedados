@@ -1,22 +1,15 @@
-//listas enlaçadas
-//typedef int vetor[10];
-//e no main:
-//vetor i;
-
-struct student{
-	int r_no;
-	char name[20];
-	char course[20];
-	float fees;	
-}stud1 = {01,"jonas","CC",4500};
-
-typedef struct{
-	int dd;
-	int mm;
-	int yy;
-}DATE;
 #include<stdio.h>
+struct node{
+	int data;
+	struct node *next;//recursivo
+};
 int main(){
-	//struct student stud1= {01,"jonas","CC",4500};
+	struct node *ptr,*start;//vai se movimentando na lista e ponteiro inicial
+	ptr=start;
+	while(ptr!=NULL){//se não acabou a lista
+		printf("\t %d",ptr->data);
+		ptr=ptr->next;
+	}
 	return 0;
 }
+
